@@ -14,24 +14,31 @@ const button = createDom('button', 'firstBtn');
 document.body.appendChild(button);
 button.textContent = 'Click';
 
+const root = document.createElement('div');
+document.body.appendChild(root);
+
 class Element {
   constructor(elm, text) {
     this.elm = elm
     this.text = text
   }
   
-  create() {
+  create(parent) {
     const newElm = document.createElement(this.elm);
     newElm.textContent = this.text
-    //document.root.appendChild(newElm)
-    return newElm
+    parent.appendChild(newElm)
+//    return newElm
   }
 
 }
 
 const head = new Element('h2', 'header')
 console.log(head);
+head.create(root);
+/*
 const title = head.create();
 console.log(title);
 document.body.appendChild(title);
 //document.body.appendChild(title);
+*/
+
