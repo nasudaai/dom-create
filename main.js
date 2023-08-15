@@ -1,3 +1,6 @@
+import { counter, helloButton } from './counter.js';
+
+
 console.log('main.js')
 
 const createDom = (element, className) => {
@@ -42,3 +45,4 @@ document.body.appendChild(title);
 //document.body.appendChild(title);
 */
 
+document.body.appendChild(document.createElement('section'));
